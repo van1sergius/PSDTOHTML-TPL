@@ -1,0 +1,38 @@
+.reviews
+  height: 396px
+  
+.reviews__inner
+  width: 960px
+
+.reviews__item
+  padding-left: 256px
+  padding-top: 7px
+
+.reviews__title
+  padding-top: 15px
+  padding-left: 70px
+
+.reviews__button
+  top: 64px
+
+.reviews__slider
+  +margin-auto
+  margin-top: 49px
+  width: 818px
+  &>.slick-dots
+    top: 43px
+
+.reviews__image
+  content: url('../img/travis--desktop.png')
+  top: 0
+  left: -61px
+
+.reviews__slider-arrow-left, 
+.reviews__slider-arrow-right
+  cursor: pointer
+  top: 138px
+  >svg
+    +transition-basic
+  &:hover>svg
+    fill: $accent
+    

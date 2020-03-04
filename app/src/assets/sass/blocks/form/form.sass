@@ -1,0 +1,178 @@
+.form
+  position: relative
+  padding-top: 32px
+  padding-bottom: 36px
+  // height: 1600px
+  background-color: #f8f5f2
+  &::after
+    +triangle-border(#f8f5f2)
+    position: absolute
+    display: block
+    content: ""
+    top: 99.9% !important
+    height: 40px
+    width: 100%
+    background: url(../img/triangle-white.svg) no-repeat center
+    background-size: 100% 40px
+    z-index: 1
+
+.form__header
+  display: none
+
+.form__headline
+  font-size: 30px
+  font-weight: bold
+  text-transform: uppercase
+
+.form__contacts
+  padding: 0 18px
+  border: none
+
+.form__text
+  margin-bottom: 5px
+  padding: 13px
+  padding-left: 18px
+  width: 100%
+  font-family: $default-font  
+  font-size: 18px
+  border: 1px solid #e5ddd5
+  resize: none
+  &:focus
+    border-color: lighten($accent, 25%)
+  &::placeholder
+    color: #000000
+  &:nth-child(3)
+    margin-bottom: 32px
+  &:nth-child(5)
+    margin-bottom: 32px
+  &:last-child
+    padding-bottom: 5px
+
+.form__radio
+  margin: 0
+  margin-top: 25px
+  padding: 0 18px
+  border: none
+
+.form__radio-title
+  text-align: center
+  text-transform: uppercase
+  font-size: 20px
+
+.form__radio-buttons
+  +reset-list
+  margin-top: 96px
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
+
+.form__radio-button
+  margin: 0 14px
+  margin-bottom: 85px
+  position: relative
+  width: 64px
+  text-align: center
+  &>input
+    display: none
+
+// @media ( min-width: 408px )
+//   .form__radio-button
+//     margin-left: 28px
+//     margin-right: 28px
+
+.form__radio-label
+  +reset-mobile-active
+  position: relative
+  display: block
+  width: 64px
+  cursor: pointer
+  &::before
+    position: absolute
+    content: ""
+    display: block
+    width: 50px
+    height: 50px
+    border: 1px solid #e5ddd5
+    border-radius: 50%
+    background-color: $white
+    top: -60px
+    left: 6px
+
+.form__radio-image
+  margin-top: 10px
+
+input[type="radio"]:checked + .form__radio-label::before
+  box-shadow: inset 0 0 0 15px #ffffff, inset 0 0 0 16px darken(#e5ddd5, 5%)
+
+.form__extra
+  margin: 0
+  padding: 0
+  margin-top: -48px
+  padding-top: 38px
+  // width: 87%
+  border: none
+
+.form__extra-title
+  text-align: center
+  text-transform: uppercase
+  font-size: 20px
+
+.form__extra-items
+  &>input
+    display: none
+
+.form__extra-item
+  +reset-mobile-active
+  position: relative
+  margin-bottom: 30px
+  padding-left: 80px
+  display: block
+  font-size: 18px
+  cursor: pointer
+  &::before
+    position: absolute
+    content: ""
+    display: block
+    width: 36px
+    height: 36px
+    border: 1px solid #e5ddd5
+    background-color: $white
+    left: 20px
+    top: -5px
+
+input[type="checkbox"]:checked + .form__extra-item::before
+  background: url('../img/checked.png') no-repeat center
+  background-color: #fff
+
+.form__submit
+  +margin-auto
+  +reset-link
+  display: block
+  margin-top: 18px
+  width: 87%
+  height: 50px
+  font-size: 18px
+  text-transform: uppercase
+  font-weight: bold
+  text-align: center
+  color: $white
+  font-family: $default-font
+  border: 1px solid #e5ddd5
+  background-color: $accent
+  cursor: pointer
+  &:hover
+    border-color: #d5c9bd
+  &:active
+    +reset-mobile-active
+    border-color: #d5c9bd
+    background-color: #d5c9bd
+    opacity: 0.3
+    color: $black
+
+
+
+@media ( min-width: $tablet )
+  @import 'form--tablet'
+
+@media ( min-width: $desktop )
+  @import 'form--desktop'

@@ -1,0 +1,104 @@
+.photo
+  position: relative
+  background-color: #f8f5f2
+  &::before
+    position: absolute
+    display: none
+    content: ""
+    bottom: 99.8%
+    height: 40px
+    width: 100%
+    background: url(../img/white-mask6.svg) no-repeat center
+    background-size: 100% 40px
+    z-index: 2
+  &::after
+    +triangle-border(#f8f5f2)
+    position: absolute
+    display: block
+    content: ""
+    top: 99.9% !important
+    height: 40px
+    width: 100%
+    background: url(../img/triangle-white.svg) no-repeat center
+    background-size: 100% 40px
+    z-index: 2
+
+
+.photo__inner
+  padding-top: 1px
+  padding-bottom: 5%
+
+.photo__header
+  display: none
+
+.photo__headline
+  font-size: 30px
+  font-weight: bold
+  text-transform: uppercase
+
+.photo__button
+  display: none
+
+.photo__list
+  margin-top: 30px
+
+.photo__item
+  margin-bottom: 30px
+
+.photo__image
+  +margin-auto
+  position: relative
+  width: 90%
+  text-align: center
+  &>picture>img
+    width: 96.7%
+  &--best-work::after
+    +icon(176px, 50px, '../img/best-work.png', 1.9%, null)
+    bottom: 31px
+
+.photo__text
+  +margin-auto
+  margin-top: -7px
+  padding-top: 22px
+  padding-left: 21px
+  border: 1px solid #efe9e4
+  width: 87%
+
+.photo__author
+  font-weight: bold
+  font-size: 24px
+
+.photo__comment
+  margin-top: 12px
+  margin-bottom: 15px
+  padding-right: 28px
+
+
+.photo__service-item
+  position: relative
+  display: inline-block
+  margin-right: 30px
+  margin-bottom: 14px
+  text-transform: uppercase
+  font-size: 16px
+  text-align: right
+  &--scissors
+    width: 93px
+  &--scissors::before
+    +icon(45px, 23px, '../img/scissors.png', -9px, 2px)
+  &--beard
+    width: 88px
+  &--beard::before
+    +icon(45px, 23px, '../img/beard.png', -11px, null)
+  &--mustache
+    padding-right: 10px
+    width: 82px
+  &--mustache::before
+    +icon(45px, 23px, '../img/mustache.png', -10px, null)
+
+@media ( min-width: $tablet )
+  @import 'photo--tablet'
+
+@media ( min-width: $desktop )
+  @import 'photo--desktop'
+  

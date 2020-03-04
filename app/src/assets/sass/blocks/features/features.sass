@@ -1,0 +1,95 @@
+// Slick-carousel
+.slick-dots 
+  +reset-list
+  +margin-auto
+  position: relative
+  z-index: 5
+  width: 130px
+  height: 10px
+  bottom: 0
+  left: 0
+
+
+.slick-dots li
+  display: inline-block
+  margin-right: 26.4px
+  width: 7px
+  height: 7px
+  border: 1px solid $white
+  cursor: pointer;
+  transform: rotate(45deg)
+  &.slick-active 
+    background-color: $white
+    cursor: default
+  &:hover
+    background-color: $white
+    border: 2px solid $white
+  &:last-child 
+    margin-right: 0
+    
+.slick-dots li button 
+  display: none
+
+
+.slider-slide:focus 
+  outline: none !important
+
+.reviews__slider > .slick-dots
+  left: 28px
+  top: -2px
+
+.reviews__slider > .slick-dots li
+  border-color: $grey
+  &.slick-active
+    background-color: $grey
+  &:hover
+    background-color: $grey
+    border-color: $grey
+
+
+
+
+.features
+  padding-bottom: 17px
+  position: relative
+  margin-top: 41px
+  // height: 320px
+  text-align: center
+  color: $white
+  z-index: 4
+  &::after
+    +triangle-border(#353535)
+    position: absolute
+    display: block
+    content: ""
+    top: 100%
+    height: 40px
+    width: 100%
+    background: url(../img/triangle-grey.svg) no-repeat center
+    background-size: 100% 40px
+    z-index: 2
+
+
+.features__image
+  +margin-auto
+  width: 95px
+  height: 95px
+  z-index: 4
+
+.features__title
+  font-weight: bold
+  text-transform: uppercase
+  font-size: 30px
+  z-index: 4
+
+.features__description
+  margin-top: -15px
+  padding: 0 13vw
+  font-size: 20px
+  z-index: 4
+
+@media ( min-width: $tablet )
+  @import 'features--tablet'
+
+@media ( min-width: $desktop )
+  @import 'features--desktop'

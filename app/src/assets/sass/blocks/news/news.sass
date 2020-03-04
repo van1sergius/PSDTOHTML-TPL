@@ -1,0 +1,80 @@
+.news
+  padding-top: 50px
+  padding-bottom: 28px
+  background-color: #f8f5f2
+  border-bottom: 1px solid #e5ddd5
+  z-index: 2
+
+.news__title
+  text-align: center
+  text-transform: uppercase
+  font-size: 30px
+
+.news__list
+  +reset-list
+  margin-top: 30px
+
+.news__item
+  +margin-auto
+  min-height: 100px
+  padding-bottom: 18px
+  width: 88%
+  position: relative
+  &:first-child
+    border-bottom: 1px solid #e5ddd5
+  &:last-child
+    display: none
+
+.news__date
+  position: absolute
+  display: block
+  padding-top: 13px
+  width: 50px
+  height: 50px
+  font-size: 16px
+  text-align: center
+  line-height: 15px
+  color: $white
+  background-color: $black
+  left: 4px
+  top: 12px
+  &::after
+    +icon(50px, 10px, '../img/triangle-small.png', 0, 100%)
+  &.ie
+    line-height: 11px
+  &.edge
+    line-height: 11px
+
+.news__day
+  font-size: 30px
+
+.news__text
+  margin-bottom: 0
+  padding-left: 75px
+
+.news__button
+  +margin-auto
+  +reset-link
+  display: block
+  margin-top: 2px
+  padding: 10px
+  width: 87%
+  height: 50px
+  font-size: 18px
+  text-transform: uppercase
+  font-weight: bold
+  text-align: center
+  border: 1px solid #e5ddd5
+  &:hover
+    border-color: #d5c9bd
+  &:active
+    +reset-mobile-active
+    border-color: #d5c9bd
+    background-color: #d5c9bd
+    opacity: 0.3
+
+@media ( min-width: $tablet )
+  @import 'news--tablet'
+  
+@media ( min-width: $desktop )
+  @import 'news--desktop'

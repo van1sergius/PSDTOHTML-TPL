@@ -1,0 +1,175 @@
+  
+.signin
+  display: none
+  position: absolute
+  width: 100%
+  background-color: #f8f5f2
+  top: 84px
+  box-shadow: 0px 54px 84px -7px rgba(0,0,0,0.56)
+  z-index: 2
+  &--visible
+    display: block
+    animation-duration: 0.6s
+
+
+.signin__inner
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  padding: 0 20px
+  padding-top: 33px
+  width: 100%
+  height: 408px
+  &>input[type="checkbox"]
+    display: none
+
+.signin__title
+  margin: 0
+  width: 100% 
+  text-transform: uppercase
+  font-size: 30px
+  font-weight: bold
+  text-align: center
+
+.signin__text
+  position: relative
+  margin: 0
+  margin-top: -5px
+  width: 100%
+  text-align: center
+
+
+.signin__login,
+.signin__password
+  position: relative
+  display: block
+  padding-left: 18px
+  height: 50px
+  width: 100%
+  font-family: $default-font
+  font-size: 18px
+  border: 1px solid #e5ddd5
+  top: 0
+  &::placeholder
+    color: #000000
+
+.signin__login
+  margin-top: 0
+  background-image: url('../img/user.png')
+  background-repeat: no-repeat
+  background-color: $white
+  background-position: 93% 16px
+  top: -2px
+
+.signin__password
+  background-image: url('../img/lock.png')
+  background-repeat: no-repeat
+  background-color: $white
+  background-position: 93% 15px
+  top: -19px
+
+.signin__remember
+  +reset-mobile-active
+  padding-left: 47px
+  position: relative
+  display: block
+  cursor: pointer
+  user-select: none
+  width: 60%
+  height: 36px
+  &::before
+    position: absolute
+    content: ""
+    display: block
+    width: 36px
+    height: 36px
+    border: 1px solid #e5ddd5
+    background-color: $white
+    left: 0
+    top: -5px
+
+input[type="checkbox"]:checked + .signin__remember::before
+  background: url('../img/checked.png') no-repeat center
+  background-color: #fff
+
+.signin__forget,
+.signin__remember
+  +reset-mobile-active
+  user-select: none
+  position: relative
+  top: -10px
+
+.signin__forget
+  +reset-link
+  display: block
+  width: 38%
+  text-align: right
+  &:hover
+    color: $accent
+  &:hover>span
+    border-bottom: 1px solid $accent
+  &:active
+    color: #000
+  &:active>span
+    border-bottom: 1px solid #000
+  &--text
+    display: inline-block
+    height: 23px
+    width: 104px
+    border-bottom: 1px solid #000
+
+.signin__submit,
+.signin__close
+  +margin-auto
+  +reset-link
+  position: relative
+  margin: 0 !important
+  display: block
+  margin-top: 5px
+  width: 47%
+  height: 50px
+  font-size: 18px
+  text-transform: uppercase
+  font-weight: bold
+  text-align: center
+  color: $white
+  font-family: $default-font
+  border: 1px solid #e5ddd5
+  background-color: $accent
+  top: -14px
+  &:hover
+    border-color: #d5c9bd
+  &:active
+    +reset-mobile-active
+    border-color: #d5c9bd
+    background-color: #d5c9bd
+    opacity: 0.3
+    color: $black
+
+  
+
+.signin__submit
+  +reset-mobile-active
+  cursor: pointer
+  &--full
+    display: none
+
+.signin__close
+  +reset-mobile-active
+  background-color: transparent
+  color: #000
+  outline: none
+  cursor: pointer
+  &:active
+    background-color: transparent
+    
+
+
+
+
+@media ( min-width: $tablet )
+  @import 'signin--tablet'
+  
+@media ( min-width: $desktop )
+  @import 'signin--desktop'

@@ -1,0 +1,97 @@
+$hamburger-layer-height: 2px
+$hamburger-layer-color: #fff
+$hamburger-layer-border-radius: 0
+$hamburger-layer-width: 40px
+$hamburger-layer-spacing: 7px
+$hamburger-padding-y: 11.6px
+
+@import '../../../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss'
+
+.hamburger
+  +reset-mobile-active
+  position: absolute
+  outline: none
+  right: 0
+  top: 0
+  background-color: $accent-dark
+
+.hamburger-box
+  top: 3px
+  left: 3px
+
+.hamburger-inner, 
+.hamburger-inner::after,.hamburger-inner::before
+  width: 36px
+  
+
+
+.header
+  position: relative
+  min-width: 242px
+  background-color: $grey
+
+.logo
+  display: block
+  padding-top: 28px
+  padding-left: 6px
+  text-align: center
+
+.nav
+  margin-top: 19px
+
+.nav__inner
+  position: relative
+  background-color: $black
+
+.nav__list
+  +reset-list
+  display: flex
+  flex-direction: column
+
+.nav__link
+  +reset-link
+  +reset-mobile-active
+  position: relative
+  display: none
+  padding: 11.4px 21.2px 
+  padding-right: 0
+  color: $white
+  text-transform: uppercase
+  font-weight: 700
+  background-color: $accent
+  border-bottom: 1px solid #71543f
+  &:active
+    background-color: $accent-dark
+ 
+.nav__link--active
+  display: block
+  padding-left: 0
+  text-align: center
+  border-bottom: 1px solid $accent-dark
+  pointer-events: none
+  &.nav__link--visible>.nav__link-text
+    opacity: 0.3
+  &:active
+    background-color: $accent
+    
+
+.nav__link--visible
+  display: block
+  padding: 11.4px 21.2px 
+  padding-right: 0
+  text-align: left
+  &:active>.nav__link-text
+    opacity: 0.3
+
+.nav__link--login
+  text-transform: none
+  font-weight: normal
+  padding-left: 48px
+  &::before
+    +icon(16px, 16px, '../img/login.png', 19px, 16px)
+
+@media ( min-width: $tablet )
+  @import 'header--tablet'
+  
+@media ( min-width: $desktop )
+  @import 'header--desktop'

@@ -1,0 +1,54 @@
+@import 'vars'
+@import 'mixins'
+@import 'fonts'
+@import 'libs'
+
+*,
+*:before,
+*:after
+	box-sizing: border-box
+	outline-color: $accent-dark
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: lighten(#ff6961, 10%)
+	&:required:valid
+		border-color: #e5ddd5
+
+body
+	position: relative
+	margin: 0 auto
+	min-width: 320px
+
+	font-size: 18px
+
+	line-height: 27px
+	font-family: $default-font
+	color: $text
+	background-color: #353535
+
+
+
+@import 'blocks/header/header'
+@import 'blocks/stats/_stats'
+@import 'blocks/features/features'
+@import 'blocks/news/news'
+@import 'blocks/reviews/reviews'
+@import 'blocks/portfolio/photo'
+@import 'blocks/footer/footer'
+@import 'blocks/price/price'
+@import 'blocks/form/form'
+@import 'blocks/signin/signin'
+
+	
+
+
+	

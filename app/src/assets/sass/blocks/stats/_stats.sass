@@ -1,0 +1,91 @@
+.stats
+  position: relative
+
+.stats__header
+  padding-top: 26px
+  padding-bottom: 26px
+  background-color: #f8f5f2
+  text-align: center
+
+
+.stats__slogan
+  display: inline-block
+  padding: 0 45px
+  text-transform: uppercase
+  color: $black
+  font-size: 30px
+  font-weight: bold
+  line-height: 30px
+
+.stats__intro
+  display: inline-block
+  margin-top: 15.5px
+  margin-bottom: 0
+  padding: 0 35px
+  font-size: 20.4px
+
+.stats__legend
+  +margin-auto
+  display: block
+  margin-top: 16px
+  width: 100%
+  text-align: center
+  color: $white
+  font-size: 20px
+  opacity: 0.3
+
+.stats__table
+
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+  border-collapse: collapse
+  border-spacing: 0
+
+  margin: 0
+  color: $white
+  width: 100%
+
+.stats__item
+  width: 100%
+  &:nth-child(1)
+    background-color: #404040
+  &:nth-child(2)
+    background-color: #4e4e4e
+  &:nth-child(3)
+    background-color: #353535
+  &:nth-child(4)
+    background-color: #404040
+  
+
+
+.stats__value
+  padding: 26px 0
+  padding-left: 20px
+  width: 55%
+  font-size: 40px
+  font-weight: bold
+  &--asterisk
+    position: relative
+    font-size: 24px
+    top: -14px
+    left: 8px
+    line-height: 0
+    
+
+.stats__field
+  padding-right: 21.5px
+  padding-left: 20px
+  width: 45%
+  text-align: right
+  line-height: 17px
+  padding-bottom: 9px
+  
+@media ( min-width: $tablet )
+  @import 'stats--tablet'
+
+@media ( min-width: $desktop )
+  @import 'stats--desktop'

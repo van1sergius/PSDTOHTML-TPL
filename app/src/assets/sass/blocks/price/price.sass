@@ -1,0 +1,88 @@
+.price
+  position: relative
+  padding-top: 47px
+  padding-bottom: 18px
+  color: $white
+  background-color: #353535
+  &::after
+    +triangle-border(#353535)
+    position: absolute
+    display: block
+    content: ""
+    top: 100%
+    height: 40px
+    width: 100%
+    background: url(../img/triangle-grey.svg) no-repeat center
+    background-size: 100% 40px
+    z-index: 2
+
+.price__inner
+  +margin-auto
+  max-width: 400px
+  padding: 0 20px
+
+.price__headline
+  font-size: 30px
+  text-align: center
+  text-transform: uppercase
+
+.price__table
+  +table-reset
+  width: 100%
+
+.price__item
+  // position: relative
+  // display: flex
+  font-size: 20px
+
+.price__index
+  display: none
+
+.price__service
+  // padding-bottom: 30px
+  display: block
+
+.price__wash
+  display: block
+  margin-bottom: 11px
+  // display: inline-block
+  // position: absolute
+  // display: block
+  // left: 10px
+  // top: 10px
+.price__value
+  vertical-align: top
+  padding-left: 10px
+  text-align: right
+  // font-weight: bold
+  // padding-bottom: 30px
+
+.price__time
+  margin-top: 14px
+  margin-bottom: 0
+  padding-top: 17px
+  padding-right: 44px
+  width: 100%
+  height: 90px
+  font-size: 20px
+  text-align: center
+  border: 1px solid #484848
+  &--text
+    position: relative
+    display: inline-block
+    // padding-left: 30px
+    width: 122px
+    text-align: left
+    left: 56px
+  &--text::before
+    +icon(58px, 57px, '../img/clock.png', -92px, -3px)
+
+@media ( min-width: $tablet )
+  @import 'price--tablet'
+
+@media ( min-width: $desktop )
+  @import 'price--desktop'
+      
+
+
+

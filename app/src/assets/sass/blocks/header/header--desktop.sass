@@ -1,0 +1,51 @@
+.header
+  height: 720px
+  background: url('../img/bg-desktop.jpg') no-repeat center
+
+.logo
+  top: 129px
+
+.nav__list
+  width: 960px
+
+.nav__link
+  margin-right: 0  
+  padding: 22px 31.5px
+  &:active
+    opacity: 1
+  &:hover
+    background-color: $white
+    color: $black
+
+.nav__link:active .nav__link-text
+  opacity: 0.3
+  color: $black
+
+.nav__link--active:active .nav__link-text
+  opacity: 1
+  color: $white
+
+.nav__link--login
+  position: relative
+  margin-left: 77px
+  padding-left: 61px
+  font-size: inherit
+  color: $white
+  text-transform: uppercase
+  font-weight: 700
+  left: 5px
+  &::before
+    top: 28px
+    left: 27px   
+  &:hover
+    color: $black
+    &::before
+      background-image: url('../img/login-hover-desktop.png')
+
+.nav__link--active
+  &:hover
+    background-color: $black
+    color: $white
+  &:active
+    opacity: 1
+    color: $white
