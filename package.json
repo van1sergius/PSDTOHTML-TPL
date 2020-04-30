@@ -27,7 +27,7 @@
     "gulp-strip-css-comments": "^2.0.0",
     "gulp-uglify": "^3.0.2",
     "hamburgers": "^1.1.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-plainmodal": "^1.0.1",
     "panini": "^1.6.3",
     "picturefill": "^3.0.3",
